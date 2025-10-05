@@ -1,3 +1,18 @@
+// COMSC-210 | Lab 18 | Movie Review Linked List
+// Author: Chevin Jeon
+// Date: 2025-10-05
+//
+// Goal:
+//  - Create a movie reviewer system using linked lists
+//  - Implement both head and tail insertion methods
+//  - Allow users to choose insertion method at runtime
+//  - Calculate and display average ratings
+//
+// Build (example):
+//   g++ -std=c++11 -Wall -Wextra -pedantic -O2 lab18.cpp -o lab18
+//
+// ---------------------------------------------------------------------
+
 #include <iostream>
 #include <string>
 #include <iomanip>
