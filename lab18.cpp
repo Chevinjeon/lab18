@@ -113,3 +113,38 @@ int main() {
         cin >> choice;
     }
     
+    // Input reviews
+    do {
+        cout << "Enter review rating 0-5: ";
+        cin >> rating;
+        
+        // Validate rating
+        while (rating < 0 || rating > 5) {
+            cout << "Invalid rating. Please enter a value between 0 and 5: ";
+            cin >> rating;
+        }
+        
+        cout << "Enter review comments: ";
+        cin.ignore(); // Clear the input buffer
+        getline(cin, comments);
+        
+        // Add review based on user's choice
+        if (choice == 1) {
+            reviewList.addAtHead(rating, comments);
+        } else {
+            reviewList.addAtTail(rating, comments);
+        }
+        
+        cout << "Enter another review? Y/N: ";
+        cin >> continueChoice;
+        
+        // Convert to uppercase for comparison
+        continueChoice = toupper(continueChoice);
+        
+    } while (continueChoice == 'Y');
+    
+    // Display all reviews and average
+    reviewList.displayReviews();
+    
+    return 0;
+}
